@@ -15,7 +15,7 @@ options = {
   publish_frame_projected_to_2d = true,
 
   use_pose_extrapolator = true,
-  use_odometry = false,      -- ❗ Tắt odom ngoại
+  use_odometry = false,      -- ❗ tắt odom ngoại
   use_nav_sat = false,
   use_landmarks = false,
 

@@ -3,9 +3,10 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 import serial
 import time
+import math
 
-K_PULSE2V = 0.00013   # phải giống Arduino
-K_PULSE2W = 0.0035
+K_PULSE2V = 0.00045   # phải giống Arduino
+K_PULSE2W = 0.00130 
 
 class ArduinoBridge(Node):
     def __init__(self):
@@ -46,7 +47,6 @@ class ArduinoBridge(Node):
                 cmd = f"w{pulse}"   # tiến
             else:
                 cmd = f"s{pulse}"   # lùi
-
         else:
             cmd = "x"               # dừng
 

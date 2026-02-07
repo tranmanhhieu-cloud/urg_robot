@@ -7,8 +7,9 @@ def generate_launch_description():
 
     package_dir = get_package_share_directory('robot_navigation')
     map_file = os.path.join(package_dir, 'maps', 'my_map.yaml')
-    params_file = os.path.join(package_dir, 'config', 'nav2_params.yaml') #thay doi
+    params_file = os.path.join(package_dir, 'config', 'nav2_params_v3.yaml') #thay doi
     rviz_config = os.path.join(package_dir, 'rviz', 'nav2_default_view.rviz')
+    ekf_config_file = os.path.join(package_dir, 'config', 'ekf_localization.yaml')
 
     # MAP SERVER
     map_server = Node(

@@ -37,7 +37,6 @@ def generate_launch_description():
             remappings=[('/cmd_vel_out', '/cmd_vel')]  # output cuối cùng ra /cmd_vel
     )
 
-
     return LaunchDescription([
         DeclareLaunchArgument(
             'use_sim_time',
@@ -45,5 +44,5 @@ def generate_launch_description():
             description='Use sim time if true'),
         joy_node,
         teleop_node,
-        twist_mux_node    
+        twist_mux_node
     ])
