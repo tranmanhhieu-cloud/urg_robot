@@ -44,8 +44,8 @@ Lưu map:
 ros2 run nav2_map_server map_saver_cli -f my_map
 ```
 
-### Terminal 5: khởi chạy navigation (khi đã có map)
+### Terminal 5: Khởi chạy supervisor 
 ```
 source install/setup.bash
-ros2 launch robot_navigation navigation.launch.py 
+ros2 launch robot_supervisor supervisor.launch.py
 ```
