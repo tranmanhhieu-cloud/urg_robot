@@ -4,7 +4,7 @@
 ### Terminal 1
 ```
 source install/setup.bash
-ros2 run robot_control cmd_vel_to_arduino
+ros2 run robot_odom_cmd_vel bridge_odom
 ```
 
 ### Terminal 2
@@ -27,14 +27,7 @@ source install/setup.bash
 ros2 launch robot_joy joystick.launch.py 
 ```
 
-### Terminal 3: Khởi chạy odometry (odom từ lidar)
-(Note: Chỉ sử dụng khi bật nav2, cartographer thì không bật node này)
-```
-source install/setup.bash
-ros2 launch rf2o_laser_odometry rf2o_laser_odometry.launch.py 
-```
-
-### Terminal 4: Khởi chạy cartographer (Mapping)
+### Terminal 3: Khởi chạy cartographer (Mapping)
 ```
 source install/setup.bash
 ros2 launch robot_mapping cartographer.launch.py
@@ -42,6 +35,12 @@ ros2 launch robot_mapping cartographer.launch.py
 Lưu map:
 ```
 ros2 run nav2_map_server map_saver_cli -f my_map
+```
+
+### Terminal 4: khởi chạy navigation (khi đã có map)
+```
+source install/setup.bash
+ros2 launch robot_navigation navigation.launch.py 
 ```
 
 ### Terminal 5: Khởi chạy supervisor 
