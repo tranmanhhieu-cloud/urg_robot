@@ -1,0 +1,12 @@
+waypoints:
+  A:
+    position: {x: -3.6196, y: -0.6992}
+    orientation: {z: 0.0, w: 1.0}
+
+  B:
+    position: {x: -0.8518, y: -0.0650}
+    orientation: {z: 0.0, w: 1.0}
+
+  C:
+    position: {x: 1.4441, y: 2.5982}
+    orientation: {z: 0.0, w: 1.0}
